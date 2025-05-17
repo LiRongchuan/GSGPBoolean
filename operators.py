@@ -13,7 +13,7 @@ def fbm(P, B):
     mask = [random.randint(0, 1) for _ in range(len(B))]
     def M(x):
         return all(x[i] if m else not x[i] for i, m in zip(B, mask))
-    # Add the combination to parent program
+    # Concatenate the combination to parent program
     positive = random.random() < 0.5
     if positive:
         return lambda x: P(x) or M(x)
